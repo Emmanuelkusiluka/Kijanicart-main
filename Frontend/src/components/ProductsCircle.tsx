@@ -2,14 +2,11 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { ShoppingCart, BarChart3, ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
-import type { PageType } from "../App";
 import { useLanguage } from "../contexts/LanguageContext";
 
-interface ProductsCircleProps {
-  onNavigate: (page: PageType, data?: any) => void;
-}
 
-export function ProductsCircle({ onNavigate }: ProductsCircleProps) {
+
+export function ProductsCircle() {
   const [activeProduct, setActiveProduct] = useState<"marketplace" | "analytics">("marketplace");
   const { t } = useLanguage();
 

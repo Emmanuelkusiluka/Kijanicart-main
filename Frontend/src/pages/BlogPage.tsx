@@ -69,7 +69,7 @@ interface BlogPageProps {
   onNavigate: (page: PageType, data?: any) => void;
 }
 
-export function BlogPage({ onNavigate }: BlogPageProps) {
+export function BlogPage() {
   const featuredPost = blogPosts.find(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
 

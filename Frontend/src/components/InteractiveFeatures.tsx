@@ -10,11 +10,7 @@ import {
   Heart
 } from "lucide-react";
 import { motion } from "motion/react";
-import type { PageType } from "../App";
 
-interface InteractiveFeaturesProps {
-  onNavigate: (page: PageType, data?: any) => void;
-}
 
 const features = [
   {
@@ -67,7 +63,7 @@ const features = [
   },
 ];
 
-export function InteractiveFeatures({ onNavigate }: InteractiveFeaturesProps) {
+export function InteractiveFeatures() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (

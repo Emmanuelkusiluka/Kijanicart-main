@@ -29,7 +29,7 @@ export function SignInPage() {
   };
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen">
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-900 to-green-950/30">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#10b98120_1px,transparent_1px),linear-gradient(to_bottom,#10b98120_1px,transparent_1px)] bg-[size:4rem_4rem]" />
@@ -48,6 +48,11 @@ export function SignInPage() {
               className="max-w-md mx-auto w-full"
             >
               <div className="mb-8">
+                <img
+                  src="logos/logo-main.svg"
+                  alt="Kijanicart Logo"
+                  className="w-32 mb-6 mx-auto"
+                />
                 <h1 className="text-5xl text-white mb-4">Welcome Back</h1>
                 <p className="text-xl text-gray-400">
                   Sign in to your Kijanicart account

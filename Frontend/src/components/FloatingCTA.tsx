@@ -2,14 +2,10 @@ import { Button } from "./ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { motion } from "motion/react";
-import type { PageType } from "../App";
 import { useLanguage } from "../contexts/LanguageContext";
 
-interface FloatingCTAProps {
-  onNavigate: (page: PageType, data?: any) => void;
-}
 
-export function FloatingCTA({ onNavigate }: FloatingCTAProps) {
+export function FloatingCTA() {
   const { t } = useLanguage();
 
   return (
@@ -30,18 +26,18 @@ export function FloatingCTA({ onNavigate }: FloatingCTAProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative bg-gradient-to-br from-neutral-900 to-neutral-950 border border-green-500/30 rounded-[3rem] overflow-hidden"
+            className="relative bg-gradient-to-br from-neutral-900 to-neutral-950 border border-green-500/30 rounded-2xl overflow-hidden"
           >
             {/* Content Grid */}
             <div className="grid lg:grid-cols-2 gap-0">
               {/* Left - Content */}
-              <div className="p-12 lg:p-16 flex flex-col justify-center">
+              <div className="p-6 lg:p-16 flex flex-col justify-center">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-full mb-8 w-fit">
                   <Sparkles className="w-4 h-4 text-green-400" />
                   <span className="text-sm text-green-400">{t("cta.badge")}</span>
                 </div>
 
-                <h2 className="text-5xl md:text-6xl mb-6">
+                <h2 className="text-4xl lg:text-5xl md:text-6xl mb-6">
                   <span className="text-white">{t("cta.title1")}</span>
                   <br />
                   <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
@@ -49,7 +45,7 @@ export function FloatingCTA({ onNavigate }: FloatingCTAProps) {
                   </span>
                 </h2>
 
-                <p className="text-xl text-gray-400 mb-8 leading-relaxed">
+                <p className="text-sm lg:text:xl text-gray-400 mb-8 leading-relaxed">
                   {t("cta.description")}
                 </p>
 
@@ -67,7 +63,7 @@ export function FloatingCTA({ onNavigate }: FloatingCTAProps) {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <span className="text-gray-300">{benefit}</span>
+                      <span className="text-sm text-gray-300">{benefit}</span>
                     </div>
                   ))}
                 </div>
@@ -121,7 +117,7 @@ export function FloatingCTA({ onNavigate }: FloatingCTAProps) {
                 <div className="absolute bottom-8 right-8 bg-neutral-900/80 backdrop-blur-xl border border-green-500/30 rounded-2xl p-6">
                   <div className="text-center">
                     <div className="text-3xl bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">
-                      $2.5M+
+                      $100k+
                     </div>
                     <div className="text-sm text-gray-400">{t("cta.sales")}</div>
                   </div>

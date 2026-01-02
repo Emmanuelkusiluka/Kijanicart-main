@@ -54,7 +54,7 @@ const featureCategories = [
   }
 ];
 
-export function FeaturesPage({ onNavigate }: FeaturesPageProps) {
+export function FeaturesPage() {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}

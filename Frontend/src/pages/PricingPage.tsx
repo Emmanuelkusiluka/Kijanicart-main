@@ -2,7 +2,6 @@ import { motion } from "motion/react";
 import { Check, HelpCircle, ArrowRight } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
-import type { PageType } from "../App";
 
 const pricingPlans = [
   {
@@ -22,7 +21,7 @@ const pricingPlans = [
   },
   {
     name: "Professional",
-    price: "$49",
+    price: "Tsh 49000",
     period: "/month",
     description: "For growing businesses",
     features: [
@@ -97,7 +96,7 @@ interface PricingPageProps {
   onNavigate: (page: PageType, data?: any) => void;
 }
 
-export function PricingPage({ onNavigate }: PricingPageProps) {
+export function PricingPage() {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}

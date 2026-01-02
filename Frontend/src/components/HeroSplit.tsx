@@ -2,14 +2,10 @@ import { Button } from "./ui/button";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { motion } from "motion/react";
-import type { PageType } from "../App";
 import { useLanguage } from "../contexts/LanguageContext";
 
-interface HeroSplitProps {
-  onNavigate: (page: PageType, data?: any) => void;
-}
 
-export function HeroSplit({ onNavigate }: HeroSplitProps) {
+export function HeroSplit() {
   const { t } = useLanguage();
 
   return (

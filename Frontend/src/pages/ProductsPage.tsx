@@ -4,11 +4,11 @@ import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
 import type { PageType } from "../App";
 
-interface ProductsPageProps {
-  onNavigate: (page: PageType, data?: any) => void;
-}
+// interface ProductsPageProps {
+//   onNavigate: (page: PageType, data?: any) => void;
+// }
 
-export function ProductsPage({ onNavigate }: ProductsPageProps) {
+export function ProductsPage() {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
