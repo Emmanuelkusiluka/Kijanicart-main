@@ -40,13 +40,13 @@ const features = [
   {
     icon: Globe,
     title: "Multi-Region",
-    description: "Serving 15+ countries across Africa",
+    description: "Serving 9+ regions across Tanzania",
     gradient: "from-teal-500 to-green-500",
   },
   {
     icon: Users,
     title: "Community",
-    description: "Join 5000+ agribusiness owners",
+    description: "Join 1000+ agribusiness owners",
     gradient: "from-indigo-500 to-purple-500",
   },
   {
