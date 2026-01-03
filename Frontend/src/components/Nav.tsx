@@ -71,7 +71,7 @@ export function Nav() {
               >
                 {item.label}
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-green-400 transition-all duration-300 ${
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-green-400 transition-all duration-100 ${
                     isActive(item.path) ||
                     (item.path === "/blog" &&
                       location.pathname.startsWith("/blog"))

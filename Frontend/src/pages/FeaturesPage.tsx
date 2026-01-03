@@ -5,11 +5,8 @@ import {
   Layers, RefreshCw, Cloud, MessageSquare 
 } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
-import type { PageType } from "../App";
+import { Link } from "react-router-dom";
 
-interface FeaturesPageProps {
-  onNavigate: (page: PageType, data?: any) => void;
-}
 
 const featureCategories = [
   {
@@ -134,22 +131,21 @@ export function FeaturesPage() {
 
       {/* Bottom CTA */}
       <motion.div 
-        className="mt-20 text-center"
+        className="mt-20 text-center mb-20"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-5xl text-white mb-6">
+        <h2 className="text-4xl md:text-5xl text-white mb-6">
           Ready to Experience These Features?
         </h2>
         <p className="text-xl text-gray-400 mb-8">
           Start your free 30-day trial and see how Kijanicart can transform your agribusiness
         </p>
         <button 
-          onClick={() => onNavigate("getstarted")}
           className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white rounded-2xl text-lg transition-all duration-300 hover:shadow-[0_0_40px_rgba(34,197,94,0.5)]"
         >
-          Start Free Trial
+          <Link to="/getstarted">Start Free Trial</Link>
         </button>
       </motion.div>
     </div>

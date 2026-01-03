@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { Check, HelpCircle, ArrowRight } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card, CardContent } from "../components/ui/card";
+import { Link } from "react-router-dom";
 
 const pricingPlans = [
   {
@@ -64,7 +65,7 @@ const faqs = [
   },
   {
     question: "What payment methods do you accept?",
-    answer: "We accept all major credit cards, mobile money (M-Pesa, MTN Mobile Money, Airtel Money), and bank transfers for annual plans."
+    answer: "We accept all major credit cards, mobile money (M-Pesa, Mixx by Yas, Airtel Money), and bank transfers for annual plans."
   },
   {
     question: "Is there a setup fee?",
@@ -139,9 +140,13 @@ export function PricingPage() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className={`bg-neutral-900/50 border-2 hover:border-green-500/50 transition-all duration-300 relative h-full ${
-                  plan.popular ? 'border-green-500 shadow-[0_0_50px_rgba(34,197,94,0.3)]' : 'border-neutral-800'
-                }`}>
+                <Card
+                  className={`bg-neutral-900/50 border-2 hover:border-green-500/50 transition-all duration-300 relative h-full ${
+                    plan.popular
+                      ? "border-green-500 shadow-[0_0_50px_rgba(34,197,94,0.3)]"
+                      : "border-neutral-800"
+                  }`}
+                >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full text-sm text-white">
                       Most Popular
@@ -156,13 +161,16 @@ export function PricingPage() {
                     <p className="text-gray-400 mb-8">{plan.description}</p>
                     <ul className="space-y-4 mb-8">
                       {plan.features.map((feature, i) => (
-                        <li key={i} className="flex items-start gap-3 text-gray-300">
+                        <li
+                          key={i}
+                          className="flex items-start gap-3 text-gray-300"
+                        >
                           <Check className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                           <span className="text-sm">{feature}</span>
                         </li>
                       ))}
                     </ul>
-                    <Button 
+                    <Button
                       onClick={() => onNavigate("getstarted")}
                       className={`w-full bg-gradient-to-r ${plan.gradient} text-white rounded-2xl group`}
                     >
@@ -187,7 +195,9 @@ export function PricingPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl text-white mb-4">All Plans Include</h2>
-            <p className="text-xl text-gray-400">Core features available to everyone</p>
+            <p className="text-xl text-gray-400">
+              Core features available to everyone
+            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -199,7 +209,7 @@ export function PricingPage() {
               "Community access",
               "Basic integrations",
               "SSL encryption",
-              "GDPR compliant"
+              "GDPR compliant",
             ].map((feature, index) => (
               <motion.div
                 key={index}
@@ -226,7 +236,9 @@ export function PricingPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl text-white mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-4xl text-white mb-4">
+              Frequently Asked Questions
+            </h2>
             <p className="text-xl text-gray-400">Everything you need to know</p>
           </motion.div>
 
@@ -246,8 +258,12 @@ export function PricingPage() {
                         <HelpCircle className="w-5 h-5 text-green-400" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-lg text-white mb-2">{faq.question}</h3>
-                        <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
+                        <h3 className="text-lg text-white mb-2">
+                          {faq.question}
+                        </h3>
+                        <p className="text-gray-400 leading-relaxed">
+                          {faq.answer}
+                        </p>
                       </div>
                     </div>
                   </CardContent>
@@ -265,21 +281,20 @@ export function PricingPage() {
           >
             <h3 className="text-2xl text-white mb-4">Still have questions?</h3>
             <p className="text-gray-400 mb-6">
-              Our team is here to help you find the perfect plan for your business
+              Our team is here to help you find the perfect plan for your
+              business
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                onClick={() => onNavigate("contact")}
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white rounded-2xl"
               >
-                Contact Sales
+                <Link to="/contact">Contact Sales</Link>
               </Button>
               <Button
-                onClick={() => onNavigate("getstarted")}
                 variant="outline"
                 className="border-green-500/30 text-green-400 hover:bg-green-500/10 rounded-2xl"
               >
-                Start Free Trial
+                <Link to="/getstarted">Start Free Trial</Link>
               </Button>
             </div>
           </motion.div>
