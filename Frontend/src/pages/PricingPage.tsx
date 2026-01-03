@@ -92,15 +92,11 @@ const faqs = [
   }
 ];
 
-interface PricingPageProps {
-  onNavigate: (page: PageType, data?: any) => void;
-}
-
 export function PricingPage() {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="relative py-12 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-900 to-green-950/30">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#10b98120_1px,transparent_1px),linear-gradient(to_bottom,#10b98120_1px,transparent_1px)] bg-[size:4rem_4rem]" />
         </div>
@@ -117,7 +113,7 @@ export function PricingPage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-full mb-8">
               <span className="text-sm text-green-400">Flexible Pricing</span>
             </div>
-            <h1 className="text-6xl md:text-7xl mb-6">
+            <h1 className="text-4xl md:text-7xl mb-6">
               <span className="text-white">Grow Your Business</span>
               <br />
               <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">

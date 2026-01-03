@@ -3,6 +3,7 @@ import { ArrowRight, Play, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { motion } from "motion/react";
 import { useLanguage } from "../contexts/LanguageContext";
+import { Link } from "react-router-dom";
 
 
 export function HeroSplit() {
@@ -52,37 +53,35 @@ export function HeroSplit() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                onClick={() => onNavigate("getstarted")}
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white text-lg px-8 py-6 rounded-2xl group"
               >
-                {t("hero.cta1")}
+                <Link to="/getstarted">{t("hero.cta1")}</Link>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button 
                 size="lg" 
-                onClick={() => onNavigate("products")}
                 variant="outline" 
                 className="border-green-500/30 text-green-400 hover:bg-green-500/10 text-lg px-8 py-6 rounded-2xl"
               >
                 <Play className="w-4 h-4 mr-2" />
-                {t("hero.cta2")}
+                <Link to="/products">{t("hero.cta2")}</Link>
               </Button>
             </div>
 
             {/* Stats */}
             <div className="flex items-center gap-8 pt-4">
               <div className="text-center">
-                <div className="text-3xl bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">5K+</div>
+                <div className="text-3xl bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">500+</div>
                 <div className="text-sm text-gray-500">{t("hero.stat1")}</div>
               </div>
               <div className="w-px h-12 bg-green-500/20" />
               <div className="text-center">
-                <div className="text-3xl bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">$2.5M</div>
+                <div className="text-3xl bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">100M</div>
                 <div className="text-sm text-gray-500">{t("hero.stat2")}</div>
               </div>
               <div className="w-px h-12 bg-green-500/20" />
               <div className="text-center">
-                <div className="text-3xl bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">15+</div>
+                <div className="text-3xl bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">+63%</div>
                 <div className="text-sm text-gray-500">{t("hero.stat3")}</div>
               </div>
             </div>

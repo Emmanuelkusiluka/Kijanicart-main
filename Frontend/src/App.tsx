@@ -19,6 +19,7 @@ function App() {
           <Route element={<MainLayout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/products" element={<ProductsPage />} />
+            {/* <Route path="/products" element={<Products />} /> */}
             <Route path="/features" element={<FeaturesPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="pricing" element={<PricingPage />} />

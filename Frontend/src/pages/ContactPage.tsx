@@ -31,7 +31,7 @@ export function ContactPage() {
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
-      <section className="relative py-32 overflow-hidden">
+      <section className="relative py-12 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-900 to-green-950/30">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#10b98120_1px,transparent_1px),linear-gradient(to_bottom,#10b98120_1px,transparent_1px)] bg-[size:4rem_4rem]" />
         </div>
@@ -48,7 +48,7 @@ export function ContactPage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-full mb-8">
               <span className="text-sm text-green-400">Get in Touch</span>
             </div>
-            <h1 className="text-6xl md:text-7xl mb-6">
+            <h1 className="text-4xl md:text-7xl mb-6">
               <span className="text-white">We'd Love to</span>
               <br />
               <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
@@ -56,7 +56,8 @@ export function ContactPage() {
               </span>
             </h1>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Have questions? Need support? Want to partner with us? We're here to help.
+              Have questions? Need support? Want to partner with us? We're here
+              to help.
             </p>
           </motion.div>
         </div>
@@ -72,22 +73,22 @@ export function ContactPage() {
                 title: "Email Us",
                 content: "hello@kijanicart.com",
                 subContent: "support@kijanicart.com",
-                gradient: "from-green-500 to-emerald-600"
+                gradient: "from-green-500 to-emerald-600",
               },
               {
                 icon: Phone,
                 title: "Call Us",
-                content: "+254 700 000 000",
+                content: "+255 714 710 827",
                 subContent: "Mon-Fri, 8am-6pm EAT",
-                gradient: "from-emerald-500 to-teal-600"
+                gradient: "from-emerald-500 to-teal-600",
               },
               {
                 icon: MapPin,
                 title: "Visit Us",
-                content: "Nairobi, Kenya",
-                subContent: "East Africa Hub",
-                gradient: "from-teal-500 to-green-600"
-              }
+                content: "Dodoma, Tanzania",
+                subContent: "East Africa",
+                gradient: "from-teal-500 to-green-600",
+              },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -98,7 +99,9 @@ export function ContactPage() {
               >
                 <Card className="bg-neutral-900/50 border-neutral-800 hover:border-green-500/50 transition-all duration-300">
                   <CardContent className="p-8 text-center">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${item.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
+                    <div
+                      className={`w-16 h-16 bg-gradient-to-r ${item.gradient} rounded-2xl flex items-center justify-center mx-auto mb-6`}
+                    >
                       <item.icon className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl text-white mb-3">{item.title}</h3>
@@ -119,12 +122,16 @@ export function ContactPage() {
             >
               <h2 className="text-4xl text-white mb-6">Send Us a Message</h2>
               <p className="text-lg text-gray-400 mb-8">
-                Fill out the form and our team will get back to you within 24 hours.
+                Fill out the form and our team will get back to you within 24
+                hours.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm text-gray-400 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm text-gray-400 mb-2"
+                  >
                     Your Name
                   </label>
                   <Input
@@ -139,7 +146,10 @@ export function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm text-gray-400 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm text-gray-400 mb-2"
+                  >
                     Email Address
                   </label>
                   <Input
@@ -155,7 +165,10 @@ export function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm text-gray-400 mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm text-gray-400 mb-2"
+                  >
                     Subject
                   </label>
                   <Input
@@ -170,7 +183,10 @@ export function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm text-gray-400 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm text-gray-400 mb-2"
+                  >
                     Message
                   </label>
                   <Textarea
@@ -184,7 +200,7 @@ export function ContactPage() {
                   />
                 </div>
 
-                <Button 
+                <Button
                   type="submit"
                   className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white rounded-2xl py-6 group"
                 >
@@ -207,12 +223,15 @@ export function ContactPage() {
                       <MessageSquare className="w-6 h-6 text-green-400" />
                     </div>
                     <div>
-                      <h3 className="text-xl text-white mb-2">Live Chat Support</h3>
+                      <h3 className="text-xl text-white mb-2">
+                        Live Chat Support
+                      </h3>
                       <p className="text-gray-400 mb-4">
-                        Chat with our support team in real-time for immediate assistance.
+                        Chat with our support team in real-time for immediate
+                        assistance.
                       </p>
-                      <Button 
-                        variant="outline" 
+                      <Button
+                        variant="outline"
                         className="border-green-500/30 text-green-400 hover:bg-green-500/10"
                       >
                         Start Chat
@@ -229,7 +248,9 @@ export function ContactPage() {
                       <Clock className="w-6 h-6 text-emerald-400" />
                     </div>
                     <div>
-                      <h3 className="text-xl text-white mb-2">Business Hours</h3>
+                      <h3 className="text-xl text-white mb-2">
+                        Business Hours
+                      </h3>
                       <div className="space-y-2 text-gray-400">
                         <div className="flex justify-between">
                           <span>Monday - Friday</span>
@@ -251,9 +272,12 @@ export function ContactPage() {
 
               <Card className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border-green-500/30">
                 <CardContent className="p-8">
-                  <h3 className="text-xl text-white mb-4">Need Immediate Help?</h3>
+                  <h3 className="text-xl text-white mb-4">
+                    Need Immediate Help?
+                  </h3>
                   <p className="text-gray-300 mb-6">
-                    Check out our comprehensive documentation and FAQs for quick answers to common questions.
+                    Check out our comprehensive documentation and FAQs for quick
+                    answers to common questions.
                   </p>
                   <Button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white rounded-2xl">
                     View Documentation

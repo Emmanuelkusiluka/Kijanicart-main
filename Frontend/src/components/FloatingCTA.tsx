@@ -3,6 +3,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { motion } from "motion/react";
 import { useLanguage } from "../contexts/LanguageContext";
+import { Link } from "react-router-dom";
 
 
 export function FloatingCTA() {
@@ -34,7 +35,9 @@ export function FloatingCTA() {
               <div className="p-6 lg:p-16 flex flex-col justify-center">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/30 rounded-full mb-8 w-fit">
                   <Sparkles className="w-4 h-4 text-green-400" />
-                  <span className="text-sm text-green-400">{t("cta.badge")}</span>
+                  <span className="text-sm text-green-400">
+                    {t("cta.badge")}
+                  </span>
                 </div>
 
                 <h2 className="text-4xl lg:text-5xl md:text-6xl mb-6">
@@ -55,12 +58,22 @@ export function FloatingCTA() {
                     t("cta.benefit1"),
                     t("cta.benefit2"),
                     t("cta.benefit3"),
-                    t("cta.benefit4")
+                    t("cta.benefit4"),
                   ].map((benefit, index) => (
                     <div key={index} className="flex items-center gap-3">
                       <div className="w-6 h-6 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0">
-                        <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                        <svg
+                          className="w-4 h-4 text-white"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2.5}
+                            d="M5 13l4 4L19 7"
+                          />
                         </svg>
                       </div>
                       <span className="text-sm text-gray-300">{benefit}</span>
@@ -70,21 +83,19 @@ export function FloatingCTA() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button 
+                  <Button
                     size="lg"
-                    onClick={() => onNavigate("getstarted")}
                     className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white rounded-2xl px-8 group"
                   >
-                    {t("cta.button1")}
+                    <Link to="/getstarted">{t("cta.button1")}</Link>
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
-                  <Button 
+                  <Button
                     size="lg"
-                    onClick={() => onNavigate("contact")}
                     variant="outline"
                     className="border-green-500/30 text-green-400 hover:bg-green-500/10 rounded-2xl px-8"
                   >
-                    {t("cta.button2")}
+                    <Link to="/contact">{t("cta.button2")}</Link>
                   </Button>
                 </div>
 
@@ -93,12 +104,16 @@ export function FloatingCTA() {
                   <div className="flex items-center gap-6">
                     <div>
                       <div className="text-2xl text-white mb-1">4.9/5</div>
-                      <div className="text-sm text-gray-500">{t("cta.rating")}</div>
+                      <div className="text-sm text-gray-500">
+                        {t("cta.rating")}
+                      </div>
                     </div>
                     <div className="w-px h-12 bg-neutral-800" />
                     <div>
                       <div className="text-2xl text-white mb-1">99.9%</div>
-                      <div className="text-sm text-gray-500">{t("cta.uptime")}</div>
+                      <div className="text-sm text-gray-500">
+                        {t("cta.uptime")}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -112,14 +127,16 @@ export function FloatingCTA() {
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-l from-transparent via-neutral-900/50 to-neutral-900 lg:to-neutral-950" />
-                
+
                 {/* Floating Stats */}
                 <div className="absolute bottom-8 right-8 bg-neutral-900/80 backdrop-blur-xl border border-green-500/30 rounded-2xl p-6">
                   <div className="text-center">
                     <div className="text-3xl bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">
                       $100k+
                     </div>
-                    <div className="text-sm text-gray-400">{t("cta.sales")}</div>
+                    <div className="text-sm text-gray-400">
+                      {t("cta.sales")}
+                    </div>
                   </div>
                 </div>
               </div>

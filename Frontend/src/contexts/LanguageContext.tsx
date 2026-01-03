@@ -32,7 +32,7 @@ const translations = {
     "hero.cta2": "View Products",
     "hero.stat1": "Businesses",
     "hero.stat2": "Processed",
-    "hero.stat3": "Countries",
+    "hero.stat3": "Revenue",
     "hero.growth": "Growth Rate",
     
     // Products
@@ -120,7 +120,7 @@ const translations = {
     "hero.cta2": "Angalia Bidhaa",
     "hero.stat1": "Biashara",
     "hero.stat2": "Imesindikwa",
-    "hero.stat3": "Nchi",
+    "hero.stat3": "Mapato",
     "hero.growth": "Kiwango cha Ukuaji",
     
     // Products

@@ -74,7 +74,7 @@ export function GetStartedPage({ selectedProduct: initialProduct }: GetStartedPa
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h1 className="text-5xl md:text-6xl text-white mb-4">
+            <h1 className="text-4xl md:text-6xl text-white mb-4">
               Start Your Free Trial
             </h1>
             <p className="text-xl text-gray-400">
@@ -86,7 +86,7 @@ export function GetStartedPage({ selectedProduct: initialProduct }: GetStartedPa
           <div className="flex items-center justify-center mb-12">
             {Array.from({ length: getTotalSteps() }, (_, i) => i + 1).map((s) => (
               <div key={s} className="flex items-center">
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${
+                <div className={`w-auto md:w-10 h-10 p-2 rounded-full flex items-center justify-center transition-all ${
                   step >= s 
                     ? "bg-gradient-to-r from-green-500 to-emerald-600 text-white" 
                     : "bg-neutral-800 text-gray-500"
@@ -94,7 +94,7 @@ export function GetStartedPage({ selectedProduct: initialProduct }: GetStartedPa
                   {step > s ? <Check className="w-5 h-5" /> : s}
                 </div>
                 {s < getTotalSteps() && (
-                  <div className={`w-20 h-1 mx-2 transition-all ${
+                  <div className={`w-20 h-1 mx-1 md:mx-2 transition-all ${
                     step > s ? "bg-green-500" : "bg-neutral-800"
                   }`} />
                 )}
