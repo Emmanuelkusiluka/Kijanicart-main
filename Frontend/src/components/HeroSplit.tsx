@@ -51,21 +51,25 @@ export function HeroSplit() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/getstarted">
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white text-lg px-8 py-6 rounded-2xl group"
               >
-                <Link to="/getstarted">{t("hero.cta1")}</Link>
+                {t("hero.cta1")}
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button 
+              </Link>
+              <Link to="/products">
+              <Button
                 size="lg" 
                 variant="outline" 
-                className="border-green-500/30 text-green-400 hover:bg-green-500/10 text-lg px-8 py-6 rounded-2xl"
+                className="border-green-500/30 text-green-400 hover:bg-green-500/10 hover:text-white text-lg px-8 py-6 rounded-2xl"
               >
                 <Play className="w-4 h-4 mr-2" />
-                <Link to="/products">{t("hero.cta2")}</Link>
+                {t("hero.cta2")}
               </Button>
+              </Link>
             </div>
 
             {/* Stats */}

@@ -10,6 +10,7 @@ import {
   Heart
 } from "lucide-react";
 import { motion } from "motion/react";
+import {Link} from "react-router-dom";
 
 
 const features = [
@@ -67,7 +68,7 @@ export function InteractiveFeatures() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="features" className="relative py-32 overflow-hidden">
+    <section id="features" className="relative py-12 overflow-hidden mb-12">
       {/* Background */}
       <div className="absolute inset-0 bg-neutral-950">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,197,94,0.1),transparent_50%)]" />
@@ -160,10 +161,9 @@ export function InteractiveFeatures() {
             Ready to experience all these features?
           </p>
           <button 
-            onClick={() => onNavigate("getstarted")}
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full text-white cursor-pointer hover:shadow-[0_0_40px_rgba(34,197,94,0.5)] transition-shadow duration-300"
           >
-            <span>Start your free trial</span>
+            <Link to="/getstarted"><span>Start your free trial</span></Link>
             <span className="text-sm opacity-75">→</span>
           </button>
         </motion.div>

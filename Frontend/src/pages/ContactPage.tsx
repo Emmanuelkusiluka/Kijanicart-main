@@ -232,7 +232,7 @@ export function ContactPage() {
                       </p>
                       <Button
                         variant="outline"
-                        className="border-green-500/30 text-green-400 hover:bg-green-500/10"
+                        className="border-green-500/30 text-green-400 hover:bg-green-500/10 hover:text-white"
                       >
                         Start Chat
                       </Button>

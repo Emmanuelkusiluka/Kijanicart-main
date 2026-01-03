@@ -31,7 +31,7 @@ export function Nav() {
     { path: "/products", label: t("nav.products") },
     { path: "/features", label: t("nav.features") },
     { path: "/pricing", label: t("nav.pricing") },
-    { path: "/blog", label: t("nav.blog") },
+    // { path: "/blog", label: t("nav.blog") },
     { path: "/contact", label: t("nav.contact") },
   ];
 

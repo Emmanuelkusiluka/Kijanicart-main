@@ -115,7 +115,7 @@ export function BlogPage() {
               <Button
                 key={category}
                 variant="outline"
-                className={`border-neutral-800 hover:border-green-500/50 hover:bg-green-500/10 ${
+                className={`border-neutral-800 hover:border-green-500/50 hover:bg-green-500/10 hover:text-white ${
                   category === "All" ? "border-green-500 bg-green-500/10 text-green-400" : "text-gray-400"
                 }`}
               >
@@ -250,7 +250,7 @@ export function BlogPage() {
           <div className="text-center mt-12">
             <Button 
               variant="outline"
-              className="border-neutral-800 text-gray-400 hover:border-green-500/50 hover:bg-green-500/10"
+              className="border-neutral-800 text-gray-400 hover:border-green-500/50 hover:bg-green-500/10 hover:text-white"
             >
               Load More Articles
             </Button>
@@ -275,7 +275,7 @@ export function BlogPage() {
                 <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
                   Get the latest insights, trends, and tips delivered straight to your inbox every week.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <div className="flex flex-col items-center sm:flex-row gap-4 max-w-md mx-auto">
                   <input
                     type="email"
                     placeholder="Enter your email"

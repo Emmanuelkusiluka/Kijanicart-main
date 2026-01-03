@@ -93,7 +93,7 @@ export function FloatingCTA() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-green-500/30 text-green-400 hover:bg-green-500/10 rounded-2xl px-8"
+                    className="border-green-500/30 text-green-400 hover:bg-green-500/10 hover:text-white rounded-2xl px-8"
                   >
                     <Link to="/contact">{t("cta.button2")}</Link>
                   </Button>
@@ -132,7 +132,7 @@ export function FloatingCTA() {
                 <div className="absolute bottom-8 right-8 bg-neutral-900/80 backdrop-blur-xl border border-green-500/30 rounded-2xl p-6">
                   <div className="text-center">
                     <div className="text-3xl bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">
-                      $100k+
+                      Tsh 100M+
                     </div>
                     <div className="text-sm text-gray-400">
                       {t("cta.sales")}

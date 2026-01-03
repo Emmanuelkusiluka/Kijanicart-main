@@ -292,7 +292,7 @@ export function PricingPage() {
               </Button>
               <Button
                 variant="outline"
-                className="border-green-500/30 text-green-400 hover:bg-green-500/10 rounded-2xl"
+                className="border-green-500/30 text-green-400 hover:bg-green-500/10 hover:text-white rounded-2xl"
               >
                 <Link to="/getstarted">Start Free Trial</Link>
               </Button>

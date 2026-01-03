@@ -5,6 +5,7 @@ import { Input } from "../components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
 import { Checkbox } from "../components/ui/checkbox";
 import { useState } from "react";
+import {Link} from "react-router-dom";
 
 interface GetStartedPageProps {
   selectedProduct?: "marketplace" | "analytics";
@@ -510,9 +511,9 @@ export function GetStartedPage({ selectedProduct: initialProduct }: GetStartedPa
 
             <p className="text-center text-gray-400 mt-6">
               Already have an account?{" "}
-              <a href="#" className="text-green-400 hover:text-green-300">
+              <Link to="/signin" className="text-green-400 hover:text-green-300">
                 Sign in
-              </a>
+              </Link>
             </p>
           </motion.div>
         </div>
