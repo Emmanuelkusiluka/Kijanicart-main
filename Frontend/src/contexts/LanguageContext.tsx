@@ -119,7 +119,7 @@ const translations = {
     "hero.cta1": "Fungua Duka Lako",
     "hero.cta2": "Angalia Bidhaa",
     "hero.stat1": "Biashara",
-    "hero.stat2": "Imesindikwa",
+    "hero.stat2": "Imechakatwa",
     "hero.stat3": "Mapato",
     "hero.growth": "Kiwango cha Ukuaji",
     
