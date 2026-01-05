@@ -7,10 +7,13 @@ import {FeaturesPage} from "./pages/FeaturesPage";
 import {ContactPage} from "./pages/ContactPage";
 import {SignInPage} from "./pages/SignInPage";
 import {GetStartedPage} from "./pages/GetStartedPage";
-import {BlogPage} from "./pages/BlogPage";
-import {BlogDetailPage} from "./pages/BlogDetailPage";
+import {BlogPage} from "./pages/blog/BlogPage.tsx";
+import {BlogDetailPage} from "./pages/blog/BlogDetailPage.tsx";
 import {ScrollToTop} from "./components/ScrollToTop.tsx";
 import {PricingPage} from "./pages/PricingPage";
+import {UnderMaintenancePage} from "./pages/service/UnderMaintanance.tsx";
+import {ComingSoonPage} from "./pages/service/ComingSoon.tsx";
+import {Toaster} from "./components/ui/sonner";
 
 function App() {
     return (
@@ -28,12 +31,14 @@ function App() {
                         {/*<Route path="blog" element={<BlogPage />} />*/}
                         {/*<Route path="blog/:id" element={<BlogDetailPage />} />*/}
                         <Route path="/getstarted" element={<GetStartedPage/>}/>
-
-                        <Route path="*" element={<HomePage/>}/>
+                        <Route path="*" element={<UnderMaintenancePage/>}/>
+                        <Route path='/coming-soon' element={<ComingSoonPage/>}/>
                     </Route>
 
                     <Route path="/signin" element={<SignInPage/>}/>
+
                 </Routes>
+                <Toaster/>
             </Router>
         </LanguageProvider>
     );

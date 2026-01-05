@@ -84,7 +84,7 @@ export function ProductsCircle() {
                     </div>
 
                     {/* CTA */}
-                    <Link to="/getstarted">
+                    <Link to={activeProduct === "marketplace" ? "/coming-soon" : "/getstarted"}>
                         <Button
                             size="lg"
                             className={`w-full mt-6 ${
@@ -285,18 +285,21 @@ export function ProductsCircle() {
                                 </div>
 
                                 {/* CTA */}
-                                <Button
-                                    size="lg"
-                                    className={`w-full ${
-                                        activeProduct === "marketplace"
-                                            ? "bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700"
-                                            : "bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700"
-                                    } text-white rounded-2xl group`}
-                                >
-                                    <Link to="/getstarted">{t("products.cta")} {active.title}</Link>
-                                    <ArrowRight
-                                        className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"/>
-                                </Button>
+                                <Link
+                                    to={activeProduct === "marketplace" ? "/coming-soon" : "/getstarted"}>
+                                    <Button
+                                        size="lg"
+                                        className={`w-full ${
+                                            activeProduct === "marketplace"
+                                                ? "bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700"
+                                                : "bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700"
+                                        } text-white rounded-2xl group`}
+                                    >
+                                        {t("products.cta")} {active.title}
+                                        <ArrowRight
+                                            className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"/>
+                                    </Button>
+                                </Link>
                             </div>
                         </motion.div>
                     </div>
