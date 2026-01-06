@@ -160,11 +160,21 @@ export function ProductsPage() {
                             viewport={{once: true}}
                             transition={{duration: 0.6}}
                         >
-                            <div
-                                className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
-                                <ShoppingCart className="w-10 h-10 text-white"/>
+                            <div className="flex items-center gap-3 mb-4">
+
+                                <div
+                                    className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6">
+                                    <ShoppingCart className="w-10 h-10 text-white"/>
+
+                                </div>
+                                <span
+                                    className="px-3 py-1 bg-amber-500/20 border border-amber-500/30 rounded-full text-xs text-amber-400 uppercase tracking-wider">
+                              Coming Soon
+                            </span>
                             </div>
+
                             <h2 className="text-5xl text-white mb-6">Marketplace</h2>
+
                             <p className="text-xl text-gray-400 mb-8 leading-relaxed">
                                 Your complete e-commerce platform for agricultural products.
                                 Connect with buyers, manage your inventory, and grow your
