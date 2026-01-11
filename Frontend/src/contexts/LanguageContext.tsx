@@ -66,7 +66,7 @@ const translations = {
         "cta.badge": "Limited Time Offer",
         "cta.title1": "Start Growing",
         "cta.title2": "Today",
-        "cta.description": "Join 5,000+ agribusiness owners who are already transforming their operations with Kijanicart. Get started with a 30-day free trial.",
+        "cta.description": "Join 500+ agribusiness owners who are already transforming their operations with data analytics. Get started with a 30-day free trial.",
         "cta.benefit1": "No credit card required",
         "cta.benefit2": "Full access to all features",
         "cta.benefit3": "Cancel anytime",

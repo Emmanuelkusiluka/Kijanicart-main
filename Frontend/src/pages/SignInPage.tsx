@@ -244,7 +244,7 @@ export function SignInPage() {
 
                                 <div className="absolute bottom-0 left-0 right-0 p-12">
                                     <h3 className="text-3xl text-white mb-4">
-                                        Join 200+ Agribusiness Owners
+                                        Join 500+ Agribusiness Owners
                                     </h3>
                                     <p className="text-lg text-gray-300 mb-6">
                                         Access powerful tools to grow your agricultural business and
